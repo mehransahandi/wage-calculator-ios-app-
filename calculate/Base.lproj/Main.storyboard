@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -47,30 +52,71 @@
                                     <constraint firstAttribute="height" constant="100" id="XVB-Hd-ycl"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zW7-6V-U3C">
+                                <rect key="frame" x="0.0" y="396" width="375" height="82.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnC-cg-0fG">
+                                        <rect key="frame" x="165.5" y="0.0" width="44.5" height="39.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOURS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uny-az-JsE">
+                                        <rect key="frame" x="160.5" y="43.5" width="54.5" height="39"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82.5" id="m5G-RW-Bf5"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvj-fo-Wub">
+                                <rect key="frame" x="20" y="620" width="335" height="37"/>
+                                <color key="backgroundColor" white="1" alpha="0.25495158450704225" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="CLEAR ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="ClearBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="adx-zc-u0p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jI9-Sj-JKM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0yM-Tq-0ee"/>
                             <constraint firstItem="bpf-Bi-0dF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="30k-di-dCI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zW7-6V-U3C" secondAttribute="trailing" id="3CG-pD-c0n"/>
                             <constraint firstItem="92r-Is-uF0" firstAttribute="top" secondItem="jI9-Sj-JKM" secondAttribute="bottom" constant="70" id="6ll-Ns-t9j"/>
                             <constraint firstItem="jI9-Sj-JKM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="7ai-dH-5bD"/>
+                            <constraint firstItem="zW7-6V-U3C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CmZ-kl-uZ1"/>
+                            <constraint firstItem="zW7-6V-U3C" firstAttribute="top" secondItem="92r-Is-uF0" secondAttribute="bottom" constant="25" id="EER-rk-lqL"/>
+                            <constraint firstItem="Kvj-fo-Wub" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hsq-hM-bz1"/>
                             <constraint firstItem="92r-Is-uF0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JQ7-cA-Rra"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kvj-fo-Wub" secondAttribute="bottom" constant="10" id="Jl7-SU-HLW"/>
+                            <constraint firstItem="zW7-6V-U3C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M3v-aQ-Dwz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="92r-Is-uF0" secondAttribute="trailing" constant="20" id="WqN-O5-VaC"/>
                             <constraint firstItem="bpf-Bi-0dF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zd3-fY-LNR"/>
                             <constraint firstItem="bpf-Bi-0dF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="d4F-AD-MTC"/>
+                            <constraint firstItem="Kvj-fo-Wub" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kBo-Ub-qgh"/>
+                            <constraint firstItem="Kvj-fo-Wub" firstAttribute="width" secondItem="rXy-P9-xwc" secondAttribute="width" id="r11-lt-C1B"/>
                             <constraint firstItem="92r-Is-uF0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rFC-KT-Tu9"/>
                             <constraint firstItem="bpf-Bi-0dF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xMw-DJ-Gnc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="HoursLbl" destination="Uny-az-JsE" id="5E3-yJ-kKp"/>
                         <outlet property="PriceTxt" destination="rXy-P9-xwc" id="HOB-p2-gMH"/>
+                        <outlet property="ResultLBL" destination="cnC-cg-0fG" id="fQ7-uK-oGK"/>
                         <outlet property="WageTxt" destination="y1e-La-LgS" id="mUF-cH-uMl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="136.5" y="133.5"/>
         </scene>
     </scenes>
     <resources>

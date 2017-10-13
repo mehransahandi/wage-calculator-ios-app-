@@ -7,11 +7,11 @@
 //
 
 import UIKit
-@IBDesignable
+@IBDesignable // view instantly
 class CurrencyTxtField: UITextField {
     
     
-    
+    // currency design for text field
     override func draw(_ rect: CGRect) {
         let size : CGFloat = 20
         let CurrencyLbl = UILabel(frame: CGRect(x: 5, y: (frame.size.height/2)-size/2, width: size, height: size))
@@ -38,6 +38,7 @@ class CurrencyTxtField: UITextField {
         
     }
     
+    // design for textfield place holder.
     func designview (){
         
         backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.25)

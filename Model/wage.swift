@@ -13,7 +13,7 @@ class wage{
     class func gethourse (forwage wage:Double, andprice:Double)-> Int {
         
         
-        return Int(ceil(andprice/wage))
+        return Int(ceil(andprice/wage)) // function for price calculation
         
         
         
